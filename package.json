@@ -1,0 +1,24 @@
+{
+  "name": "object-equals",
+  "version": "0.1.0",
+  "description": "Deep compare two objects if they are equal",
+  "main": "./lib",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "babel ./src --out-dir ./lib && rm -rf [^l]*",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^23.0.0-alpha.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^22.4.2"
+  }
+}
