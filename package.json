@@ -8,11 +8,16 @@
   ],
   "scripts": {
     "build": "babel ./src --out-dir ./lib",
+    "prepublish": "yarn build",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": ["javascript", "object", "equal", "compare", "object-equals"],
   "author": "laveesingh",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laveesingh/object-equals"
+  },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
