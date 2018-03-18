@@ -7,11 +7,11 @@
     "lib"
   ],
   "scripts": {
-    "build": "babel ./src --out-dir ./lib && rm -rf [^l]*",
+    "build": "babel ./src --out-dir ./lib",
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "laveesingh",
   "license": "ISC",
   "devDependencies": {
     "babel": "^6.23.0",
