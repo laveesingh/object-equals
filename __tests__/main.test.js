@@ -74,4 +74,5 @@ describe('Object equality test', () => {
     fbObject2['posts']['data'][0]['comments']['data'][0]['from']['id'] = '0'
     expect(objectEquals(fbObject1, fbObject2)).toEqual(false)
   })
+
 })
