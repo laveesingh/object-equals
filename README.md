@@ -3,6 +3,8 @@ object-equals
 
 Compare two javascript objects if they are equal
 
+[![Build Status](https://travis-ci.org/laveesingh/object-equals.svg?branch=master)](https://travis-ci.org/laveesingh/object-equals)
+
 ## Installation
 
 ### npm
