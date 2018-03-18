@@ -1,7 +1,7 @@
 object-equals
 ==============
 
-Compare two javascript objects if they are equal
+Deep compare two objects to check if they are equal
 
 [![Build Status](https://travis-ci.org/laveesingh/object-equals.svg?branch=master)](https://travis-ci.org/laveesingh/object-equals)
 
@@ -18,7 +18,12 @@ Compare two javascript objects if they are equal
 #### Example Usage
 
 ```javascript
-var equals = require('object-equals').default
+import { objectEquals } from 'object-equals'
+// Or
+// import objectEquals from 'object-equals'
+// Or
+// var { objectEquals } = require('object-equals')
+
 var obj1 = {
   a: 1,
   c: {
@@ -43,8 +48,8 @@ var obj3 = {
     d: {}
   }
 }
-var ans1 = equals(obj1, obj2)
-var ans2 = equals(obj1, obj3)
+var ans1 = objectEquals(obj1, obj2)
+var ans2 = objectEquals(obj1, obj3)
 console.log(ans1) // true
 console.log(ans2) // false
 

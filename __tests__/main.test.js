@@ -1,4 +1,4 @@
-import { objectEquals } from '../src/main'
+import objectEquals from '../src/index'
 import fbObject1 from './fb.json'
 import fbObject2 from './fb2.json'
 
