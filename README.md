@@ -15,7 +15,7 @@ Deep compare two objects to check if they are equal
 
 `yarn add object-equals`
 
-#### Example Usage
+## Example Usage
 
 ```javascript
 import { objectEquals } from 'object-equals'
@@ -24,33 +24,80 @@ import { objectEquals } from 'object-equals'
 // Or
 // var { objectEquals } = require('object-equals')
 
-var obj1 = {
+const obj1 = {
   a: 1,
   c: {
     a: 11,
-    c: [1, 2, 3, 4],
     d: {}
   }
 }
-var obj2 = {
+const obj2 = {
   a: 1,
   c: {
     a: 11,
-    c: [1, 2, 3, 4],
     d: {}
   }
 }
-var obj3 = {
-  a: 1,
-  c: {
-    a: 11,
-    c: [1, 2, 4],
-    d: {}
-  }
-}
-var ans1 = objectEquals(obj1, obj2)
-var ans2 = objectEquals(obj1, obj3)
-console.log(ans1) // true
-console.log(ans2) // false
+expect(objectEquals(obj1, obj2)).toEqual(true)
 
+```
+
+## Options
+
+#### depth
+  - Level of deep comparison, after which no deep comparison is done
+```javascript
+  const obj1 = {
+    a: 1,
+    b: {
+      c: '2'
+    }
+  }
+  const obj2 = {
+    a: 1,
+    b: {
+      c: '3'
+    }
+  }
+  expect(objectEquals(obj1, obj2)).toEqual(false)
+  expect(objectEquals(obj1, obj2, {depth: 1})).toEqual(true)
+  expect(objectEquals(obj1, obj2, {depth: 2})).toEqual(false)
+```
+
+#### keysOnly
+  - if true, only keys will be compared irrespective of the values
+```javascript
+  const obj1 = {
+    a: 1,
+    b: {
+      c: '2'
+    }
+  }
+  const obj2 = {
+    a: 1,
+    b: {
+      c: '3'
+    }
+  }
+  expect(objectEquals(obj1, obj2)).toEqual(false)
+  expect(objectEquals(obj1, obj2, {keysOnly: true})).toEqual(true)
+```
+
+#### valuesOnly
+  - if true, only values will be compared irrespective of the keys
+```javascript
+  const obj1 = {
+    a: 1,
+    b: {
+      c: '2'
+    }
+  }
+  const obj2 = {
+    aaa: 1,
+    bbbb: {
+      cccc: '2'
+    }
+  }
+  expect(objectEquals(obj1, obj2)).toEqual(false)
+  expect(objectEquals(obj1, obj2, {valuesOnly: true})).toEqual(true)
 ```
