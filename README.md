@@ -45,7 +45,7 @@ var obj3 = {
 }
 var ans1 = equals(obj1, obj2)
 var ans2 = equals(obj1, obj3)
-console.log(ans1)
-console.log(ans2)
+console.log(ans1) // true
+console.log(ans2) // false
 
 ```
