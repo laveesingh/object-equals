@@ -1,6 +1,6 @@
 {
   "name": "object-equals",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Deep compare two objects if they are equal",
   "main": "./lib",
   "files": [
